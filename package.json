@@ -1,0 +1,22 @@
+{
+  "name": "wallaby-error2",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mann-david/wallaby-error2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mann-david/wallaby-error2/issues"
+  },
+  "homepage": "https://github.com/mann-david/wallaby-error2#readme",
+  "dependencies": {
+    "jest": "^24.9.0"
+  }
+}

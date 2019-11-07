@@ -1,0 +1,25 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "esnext",
+    "module": "esnext",
+    "esModuleInterop": true,
+    "typeRoots": ["common/temp/node_modules/@types"],
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@spo/http-client": ["libs/http-client/src/index.ts"],
+      "@spo/parent-child-view": ["libs/parent-child-view/src/index.ts"]
+    }
+  },
+  "exclude": ["**/node_modules"]
+}

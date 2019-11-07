@@ -1,0 +1,83 @@
+/**
+ * This is the main configuration file for Rush.
+ * For full documentation, please see https://rushjs.io
+ */
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/rush.schema.json",
+  "rushVersion": "5.16.1",
+  "pnpmVersion": "2.15.1",
+  "pnpmOptions": {
+    "strictPeerDependencies": true
+    // "resolutionStrategy": "fast"
+  },
+  "nodeSupportedVersionRange": ">=10.13.0 <=12.11.1",
+  // "suppressNodeLtsWarning": false,
+  "ensureConsistentVersions": true,
+  "projectFolderMinDepth": 2,
+  "projectFolderMaxDepth": 2,
+  "approvedPackagesPolicy": {
+    "reviewCategories": [
+    "internal", // projects used strictly within our team
+    "production", // projects that ship for external use (outside our team)
+    "tools", // non-shipping projects that are part of the developer toolchain
+    "prototypes" // experiments that should mostly be ignored by the review process
+  ],
+  "ignoredNpmScopes": [
+    "@types"
+  ]
+},
+  "gitPolicy": {
+    "allowedEmailRegExps": [
+      "^[a-zA-Z0-9_.+-]+@(?:(?:[a-zA-Z0-9-]+\.)?[a-zA-Z]+\.)?(sap)\.com$"
+    ],
+    /**
+     * When Rush reports that the address is malformed, the notice can include an example
+     * of a recommended email.  Make sure it conforms to one of the allowedEmailRegExps
+     * expressions.
+     */
+    "sampleEmail": "mrexample@sap.com",
+    // "versionBumpCommitMessage": "Applying package updates. [skip-ci]"
+  },
+  "repository": {
+    "url": "https://github.wdf.sap.corp/IT-CS-CTW-CCP-Script/spo"
+  },
+  "eventHooks": {
+    /**
+     * The list of shell commands to run before the Rush installation starts
+     */
+    "preRushInstall": [
+      // "common/scripts/pre-rush-install.js"
+    ],
+    /**
+     * The list of shell commands to run after the Rush installation finishes
+     */
+    "postRushInstall": [],
+    /**
+     * The list of shell commands to run before the Rush build command starts
+     */
+    "preRushBuild": [],
+    /**
+     * The list of shell commands to run after the Rush build command finishes
+     */
+    "postRushBuild": []
+  },
+  "variants": [],
+  "telemetryEnabled": true,
+  // "hotfixChangeEnabled": false,
+  "projects": [
+    {
+      "packageName": "sample1",
+      "projectFolder": "libs/sample1",
+      "reviewCategory": "production",
+      "skipRushCheck": false,
+      "shouldPublish": false
+    },
+	{
+      "packageName": "sample2",
+      "projectFolder": "libs/sample2",
+      "reviewCategory": "production",
+      "skipRushCheck": false,
+      "shouldPublish": false
+    }
+  ]
+}
